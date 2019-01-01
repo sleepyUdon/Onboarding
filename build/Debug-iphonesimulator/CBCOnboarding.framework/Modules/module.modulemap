@@ -1,0 +1,11 @@
+framework module CBCOnboarding {
+  umbrella header "CBCOnboarding.h"
+
+  export *
+  module * { export * }
+}
+
+module CBCOnboarding.Swift {
+    header "CBCOnboarding-Swift.h"
+    requires objc
+}

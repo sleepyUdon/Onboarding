@@ -10,47 +10,30 @@ import UIKit
 
 public class CBCOnboarding {
     
-    public var identifiers: [String]!
-    public var exitStoryboardName: String!
-    public var exitStoryboardIdentifier: String!
-
-    public var viewControllers: [UIViewController]?
-    public var onboardingViewController: OnboardingViewController!
-    public var bundle: Bundle!
-    public var storyboard: UIStoryboard!
+    public var onboardingViewControllers: [UIViewController]!
+    public var onboardingViewController: CBCOnboardingViewController!
+    public var exitStoryboardName: String = "Main"
+    public var exitStoryboardIdentifier: String = "MainTabBarController"
     
-    public init (identifiers: [String], exitStoryboardName: String, exitStoryboardIdentifier: String) {
-        self.identifiers = identifiers
+    public init (onboardingViewControllers: [UIViewController], exitStoryboardName: String, exitStoryboardIdentifier: String){
+        self.onboardingViewControllers = onboardingViewControllers
         self.exitStoryboardName = exitStoryboardName
         self.exitStoryboardIdentifier = exitStoryboardIdentifier
-
-        loadOnboardingViewControllers()
     }
     
-    public func loadOnboardingViewControllers() {
-        if identifiers.count > 0 {
-            for identifier in identifiers {
-                let viewController: UIViewController! = {
-                    return self.storyboard?.instantiateViewController(withIdentifier: identifier)
-                }()
-                viewControllers?.append(viewController)
-            }
-            initializeOnboardingViewController()
-        } else {
-            print("Onboarding has no view controllers to show")
-        }
+    public func loadOnboardingViewControllers() -> CBCOnboardingViewController? {
+        initializeOnboardingViewController()
+        return self.onboardingViewController
     }
     
     public func initializeOnboardingViewController() {
         guard let bundlePath = Bundle.init(for: CBCOnboarding.self).path(forResource: "CBCOnboarding", ofType: "bundle") else {
             fatalError("CBCOnboarding Bundle was not found")
         }
-        self.bundle = Bundle(path: bundlePath)
-        self.storyboard = UIStoryboard(name: "Onboarding", bundle: self.bundle)
-        self.onboardingViewController = (storyboard.instantiateViewController(withIdentifier: "OnboardingViewController") as! OnboardingViewController)
-        self.onboardingViewController.viewControllers = viewControllers
-        self.onboardingViewController.exitStoryboardName = exitStoryboardName
-        self.onboardingViewController.exitStoryboardIdentifier = exitStoryboardIdentifier
+        let bundle = Bundle(path: bundlePath)
+        let storyboard = UIStoryboard(name: "CBCOnboarding", bundle: bundle)
+        self.onboardingViewController = (storyboard.instantiateViewController(withIdentifier: "CBCOnboardingViewController") as! CBCOnboardingViewController)
+        self.onboardingViewController.viewControllers = onboardingViewControllers
     }
 }
 

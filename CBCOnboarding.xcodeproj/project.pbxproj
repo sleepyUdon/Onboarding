@@ -8,22 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		7C2925AB21D85504007DC6B4 /* CBCOnboarding.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C2925A921D85504007DC6B4 /* CBCOnboarding.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7C2925B621D85539007DC6B4 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2925B121D85537007DC6B4 /* OnboardingViewController.swift */; };
+		7C2925B621D85539007DC6B4 /* CBCOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2925B121D85537007DC6B4 /* CBCOnboardingViewController.swift */; };
 		7C2925B721D85539007DC6B4 /* CBCOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2925B221D85537007DC6B4 /* CBCOnboarding.swift */; };
-		7C2925B821D85539007DC6B4 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C2925B321D85538007DC6B4 /* Onboarding.storyboard */; };
+		7C2925B821D85539007DC6B4 /* CBCOnboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C2925B321D85538007DC6B4 /* CBCOnboarding.storyboard */; };
 		7C2925B921D85539007DC6B4 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2925B421D85538007DC6B4 /* ScrollViewController.swift */; };
 		7C2925BA21D85539007DC6B4 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2925B521D85539007DC6B4 /* NavigationView.swift */; };
 		7C9A798521D858AF0094E124 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C2925AA21D85504007DC6B4 /* Info.plist */; };
-		7C9A79F521D87C0D0094E124 /* CBCOnboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2925A621D85504007DC6B4 /* CBCOnboarding.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7C2925A621D85504007DC6B4 /* CBCOnboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CBCOnboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C2925A921D85504007DC6B4 /* CBCOnboarding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBCOnboarding.h; sourceTree = "<group>"; };
 		7C2925AA21D85504007DC6B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7C2925B121D85537007DC6B4 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		7C2925B121D85537007DC6B4 /* CBCOnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBCOnboardingViewController.swift; sourceTree = "<group>"; };
 		7C2925B221D85537007DC6B4 /* CBCOnboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBCOnboarding.swift; sourceTree = "<group>"; };
-		7C2925B321D85538007DC6B4 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		7C2925B321D85538007DC6B4 /* CBCOnboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CBCOnboarding.storyboard; sourceTree = "<group>"; };
 		7C2925B421D85538007DC6B4 /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		7C2925B521D85539007DC6B4 /* NavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -33,7 +32,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C9A79F521D87C0D0094E124 /* CBCOnboarding.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +43,7 @@
 			children = (
 				7C2925A821D85504007DC6B4 /* CBCOnboarding */,
 				7C2925A721D85504007DC6B4 /* Products */,
+				7C9A7A0621DA81220094E124 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,13 +60,20 @@
 			children = (
 				7C2925B221D85537007DC6B4 /* CBCOnboarding.swift */,
 				7C2925B521D85539007DC6B4 /* NavigationView.swift */,
-				7C2925B321D85538007DC6B4 /* Onboarding.storyboard */,
-				7C2925B121D85537007DC6B4 /* OnboardingViewController.swift */,
+				7C2925B321D85538007DC6B4 /* CBCOnboarding.storyboard */,
+				7C2925B121D85537007DC6B4 /* CBCOnboardingViewController.swift */,
 				7C2925B421D85538007DC6B4 /* ScrollViewController.swift */,
 				7C2925A921D85504007DC6B4 /* CBCOnboarding.h */,
 				7C2925AA21D85504007DC6B4 /* Info.plist */,
 			);
 			path = CBCOnboarding;
+			sourceTree = "<group>";
+		};
+		7C9A7A0621DA81220094E124 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C9A798521D858AF0094E124 /* Info.plist in Resources */,
-				7C2925B821D85539007DC6B4 /* Onboarding.storyboard in Resources */,
+				7C2925B821D85539007DC6B4 /* CBCOnboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,7 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C2925B621D85539007DC6B4 /* OnboardingViewController.swift in Sources */,
+				7C2925B621D85539007DC6B4 /* CBCOnboardingViewController.swift in Sources */,
 				7C2925B921D85539007DC6B4 /* ScrollViewController.swift in Sources */,
 				7C2925BA21D85539007DC6B4 /* NavigationView.swift in Sources */,
 				7C2925B721D85539007DC6B4 /* CBCOnboarding.swift in Sources */,

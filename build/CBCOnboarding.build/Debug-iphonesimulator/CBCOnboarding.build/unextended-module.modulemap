@@ -1,0 +1,10 @@
+framework module CBCOnboarding {
+  umbrella header "CBCOnboarding.h"
+
+  export *
+  module * { export * }
+}
+
+module CBCOnboarding.__Swift {
+    exclude header "CBCOnboarding-Swift.h"
+}

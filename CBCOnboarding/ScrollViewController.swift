@@ -8,8 +8,11 @@
 
 import UIKit
 
+
 public class ScrollViewController: UIViewController {
     
+    var viewControllers: [UIViewController?]!
+
     public var scrollView: UIScrollView {
         return view as! UIScrollView
     }
@@ -17,8 +20,6 @@ public class ScrollViewController: UIViewController {
     public var pageSize: CGSize {
         return scrollView.frame.size
     }
-    
-    public var viewControllers: [UIViewController]!
     
     override public func loadView() {
         let scrollView = UIScrollView()
@@ -32,15 +33,15 @@ public class ScrollViewController: UIViewController {
         super.viewDidAppear(animated)
         
         for (index, controller) in viewControllers.enumerated() {
-            addChild(controller)
-            controller.view.frame = frame(for: index)
-            scrollView.addSubview(controller.view)
-            controller.didMove(toParent: self)
+            if let controller = controller {
+                addChild(controller)
+                controller.view.frame = frame(for: index)
+                scrollView.addSubview(controller.view)
+                controller.didMove(toParent: self)
+            }
         }
-        
         scrollView.contentSize = CGSize(width: pageSize.width * CGFloat(viewControllers.count), height: pageSize.height)
-        
-        if let controller = viewControllers.first {
+        if let controller = viewControllers.first as? UIViewController {
             setController(to: controller, animated: false)
         }
     }

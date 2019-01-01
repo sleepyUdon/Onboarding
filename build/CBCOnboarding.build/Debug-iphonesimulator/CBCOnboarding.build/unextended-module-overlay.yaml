@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/vivianechan/workspace/digiops-ios-cbc-onboarding/build/Debug-iphonesimulator/CBCOnboarding.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/vivianechan/workspace/digiops-ios-cbc-onboarding/build/CBCOnboarding.build/Debug-iphonesimulator/CBCOnboarding.build/unextended-module.modulemap',
+    }]
+  }]
+}

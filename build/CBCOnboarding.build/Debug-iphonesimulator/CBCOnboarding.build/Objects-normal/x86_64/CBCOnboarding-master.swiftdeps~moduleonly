@@ -1,0 +1,8 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "375404c7d44db21c5a1688fd5b159966"
+build_time: [1546295713, 89324000]
+inputs:
+  "/Users/vivianechan/workspace/digiops-ios-cbc-onboarding/CBCOnboarding/CBCOnboardingViewController.swift": [1546295323, 0]
+  "/Users/vivianechan/workspace/digiops-ios-cbc-onboarding/CBCOnboarding/ScrollViewController.swift": [1546292948, 0]
+  "/Users/vivianechan/workspace/digiops-ios-cbc-onboarding/CBCOnboarding/NavigationView.swift": [1546134138, 0]
+  "/Users/vivianechan/workspace/digiops-ios-cbc-onboarding/CBCOnboarding/CBCOnboarding.swift": [1546295477, 0]
